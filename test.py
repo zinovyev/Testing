@@ -16,7 +16,7 @@ def wordwrap(matchobj):
 
 for word in long_text:
 	if len(word) > 3:
-		word = re.sub(u'([цкншщзхфвпрлджчмтбЦКНШЩХФВПРЛДЖЧСТ]+[а|е|и|о|у|ю|я])', wordwrap, word)
+		word = re.sub(u'([цкншщзхфвпрлджчмтбЦКНШЩХФВПРЛДЖЧСТ]+[а|е|и|о|у|ю|я][й]?)', wordwrap, word)
 		word = re.sub('-$', '', word)
 	long_text2 += word + " "
 
